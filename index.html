@@ -8,7 +8,57 @@
 </head>
 
 <body>
+  <!-- Header Section -->
+  <header>
+    <h1>Temperature Conversion App</h1>
+    <p>
+      input your number in the Celcius (&deg;C) box, and then click convert to get the result in Fahrenheit (&deg;F)
+    </p>
+  </header>
 
+  <!-- Converter Section -->
+  <main>
+    <div class="">
+      <label for="Celcius">
+        Celcius (&deg;C):
+        <input type="number" id="Celcius" step="0" placeholder="Enter temperature in Celcius">
+      </label>
+      <button id="convertButton">Convert</button>
+      <button id="resetButton">Reset</button>
+      <button id="reverseButton">Reverse</button>
+    </div>
+    <div class="">
+      <label for="Fahrenheit">
+        Celcius (&deg;F):
+        <input type="number" id="Fahrenheit" step="0" readonly placeholder="This will be filled after conversion">
+      </label>
+    </div>
+    <div class="">
+      <label for="Formula">
+        Calculation method:
+        <input type="text" id="Formula" readonly placeholder="This will be filled after conversion">
+      </label>
+    </div>
+
+    <!-- Convertion Formula Section -->
+    <section>
+      <h2>How to convert from Celcius (&deg;C) to Fahrenheit (&deg;F)</h2>
+      <p>Temperature <em>S </em>in Fahrenheit (&deg;F) is the same with temperature <em>S </em>in Celcius (&deg;C) times
+        <sup>9</sup>&frasl;<sub>5</sub> plus 32.
+      </p>
+
+      <p>
+        S<sub>(&deg;F)</sub> = (S<sub>(&deg;C)</sub> &times; <sup>9</sup>&frasl;<sub>5</sub>) + 32
+      </p>
+      <span>or</span>
+      <p>S<sub>(&deg;F)</sub> = (S<sub>(&deg;C)</sub> &times; 1.8) + 32</p>
+    </section>
+  </main>
+
+  <!-- Footer Section -->
+  <footer>
+    <p>&copy; Virz 2025</p>
+  </footer>
 </body>
 
 </html>
