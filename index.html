@@ -4,62 +4,78 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Document</title>
+  <meta name="description" content="A simple temperature conversion app that converts Celsius to Fahrenheit.">
+  <meta name="keywords" content="temperature, conversion, celsius, fahrenheit, app">
+  <meta name="author" content="Virz">
+  <link rel="stylesheet" href="css/style.css">
+  <title>Temperature Conversion App</title>
 </head>
 
 <body>
-  <!-- Header Section -->
-  <header>
-    <h1>Temperature Conversion App</h1>
-    <p>
-      input your number in the Celsius (&deg;C) box, and then click convert to get the result in Fahrenheit (&deg;F)
-    </p>
-  </header>
-
-  <!-- Converter Section -->
-  <main>
-    <div class="">
-      <label for="celsius">
-        Celsius (&deg;C):
-        <input type="number" id="celsius" placeholder="Enter temperature in Celsius">
-      </label>
-      <button id="convertButton">Convert</button>
-      <button id="resetButton">Reset</button>
-      <button id="reverseButton">Reverse</button>
-    </div>
-    <div class="">
-      <label for="fahrenheit">
-        Celsius (&deg;F):
-        <input type="number" id="fahrenheit" readonly placeholder="This will be filled after conversion">
-      </label>
-    </div>
-    <div class="">
-      <label for="formula">
-        Calculation method:
-        <input type="text" id="formula" readonly placeholder="This will be filled after conversion">
-      </label>
-    </div>
-    <span class="error-message"></span>
-
-    <!-- Convertion Formula Section -->
-    <section>
-      <h2>How to convert from Celsius (&deg;C) to Fahrenheit (&deg;F)</h2>
-      <p>Temperature <em>S </em>in Fahrenheit (&deg;F) is the same with temperature <em>S </em>in Celsius (&deg;C) times
-        <sup>9</sup>&frasl;<sub>5</sub> plus 32.
+  <div class="container">
+    <!-- Header Section -->
+    <header class="text-center">
+      <h1 class="box mb-4">Temperature Conversion App</h1>
+      <p class="box mb-4">
+        input your number in the <span class="font-bold">Celsius (&deg;C)</span> box, and then click convert to get the
+        result in
+        <span class="font-bold">Fahrenheit (&deg;F)</span>
       </p>
+    </header>
 
-      <p>
-        S<sub>(&deg;F)</sub> = (S<sub>(&deg;C)</sub> &times; <sup>9</sup>&frasl;<sub>5</sub>) + 32
-      </p>
-      <span>or</span>
-      <p>S<sub>(&deg;F)</sub> = (S<sub>(&deg;C)</sub> &times; 1.8) + 32</p>
-    </section>
-  </main>
+    <!-- Converter Section -->
+    <main class="grid">
+      <div class="grid-1 box">
+        <label for="celsius">
+          Celsius (&deg;C)
+          <input type="number" id="celsius" class="mt-2 dark-box" placeholder="Enter temperature in Celsius">
+        </label>
+      </div>
+      <div class="grid-1 box">
+        <label for="fahrenheit">
+          Celsius (&deg;F)
+          <input type="number" id="fahrenheit" class="mt-2 dark-box" readonly
+            placeholder="This will be filled after conversion">
+        </label>
+      </div>
+      <div class="grid-full box flex-between">
+        <button id="convertButton" class="button-primary">Convert</button>
+        <button id="resetButton" class="button-primary">Reset</button>
+        <button id="reverseButton" class="button-primary">Reverse</button>
+      </div>
+      <div class="grid-full box">
+        <label for="formula">
+          Calculation method
+          <input type="text" id="formula" class="mt-2 dark-box" readonly
+            placeholder="This will be filled after conversion">
+        </label>
+      </div>
+      <span class="error-message text-center font-bold grid-full" style="display: none;"></span>
 
-  <!-- Footer Section -->
-  <footer>
-    <p>&copy; Virz 2025</p>
-  </footer>
+      <!-- Convertion Formula Section -->
+      <section class="grid-full box text-center">
+        <h2>How to convert from Celsius (&deg;C) to Fahrenheit (&deg;F)</h2>
+        <p class="mt-2">Temperature <em>S </em>in <span class="font-bold">Fahrenheit (&deg;F) </span>
+          is the same with temperature <em>S </em>in <span class="font-bold">Celsius (&deg;C)</span>
+          times <sup>9</sup>&frasl;<sub>5</sub> plus 32.
+        </p>
+        <div>
+          <p class="dark-box">
+            S<sub>(&deg;F)</sub> = (S<sub>(&deg;C)</sub> &times; <sup>9</sup>&frasl;<sub>5</sub>) + 32
+          </p>
+          <p class="dark-box mt-2">or</p>
+          <p class="dark-box mt-2">
+            S<sub>(&deg;F)</sub> = (S<sub>(&deg;C)</sub> &times; 1.8) + 32
+          </p>
+        </div>
+      </section>
+    </main>
+
+    <!-- Footer Section -->
+    <footer class="box text-center">
+      <p>&copy; Virz 2025</p>
+    </footer>
+  </div>
 
   <!-- Javascript import -->
   <script src="js/script.js"></script>

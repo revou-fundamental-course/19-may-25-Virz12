@@ -13,9 +13,9 @@ const reverseButton = document.getElementById("reverseButton");
 convertButton.addEventListener("click", () => {
   const celsiusValue = parseFloat(celsius.value);
   if (isNaN(celsiusValue) || celsiusValue == null) {
-    errorMessage.innerText = "Invalid input";
     fahrenheit.value = "";
     formula.value = "";
+    addErrorMessages();
   } else {
     const f = (celsiusValue * 9 / 5) + 32;
     fahrenheit.value = f.toFixed(2);
@@ -36,8 +36,8 @@ resetButton.addEventListener("click", () => {
 reverseButton.addEventListener("click", () => {
   const fahrenheitValue = parseFloat(fahrenheit.value);
   if (isNaN(fahrenheitValue)) {
-    errorMessage.innerText = "Invalid input";
     formula.value = "";
+    addErrorMessages();
   } else {
     const c = (fahrenheitValue - 32) * 5 / 9;
     celsius.value = c.toFixed(2);
@@ -46,6 +46,15 @@ reverseButton.addEventListener("click", () => {
   }
 });
 
+// Helper functions to manage error messages
 const removeErrorMessages = () => {
   errorMessage.innerText = "";
+  errorMessage.classList.remove("error", "box");
+  errorMessage.style.display = "none";
+}
+
+const addErrorMessages = () => {
+  errorMessage.innerText = "Invalid input";
+  errorMessage.classList.add("error", "box");
+  errorMessage.style.display = "block";
 }
