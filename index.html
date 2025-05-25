@@ -12,38 +12,39 @@
   <header>
     <h1>Temperature Conversion App</h1>
     <p>
-      input your number in the Celcius (&deg;C) box, and then click convert to get the result in Fahrenheit (&deg;F)
+      input your number in the Celsius (&deg;C) box, and then click convert to get the result in Fahrenheit (&deg;F)
     </p>
   </header>
 
   <!-- Converter Section -->
   <main>
     <div class="">
-      <label for="Celcius">
-        Celcius (&deg;C):
-        <input type="number" id="Celcius" step="0" placeholder="Enter temperature in Celcius">
+      <label for="celsius">
+        Celsius (&deg;C):
+        <input type="number" id="celsius" placeholder="Enter temperature in Celsius">
       </label>
       <button id="convertButton">Convert</button>
       <button id="resetButton">Reset</button>
       <button id="reverseButton">Reverse</button>
     </div>
     <div class="">
-      <label for="Fahrenheit">
-        Celcius (&deg;F):
-        <input type="number" id="Fahrenheit" step="0" readonly placeholder="This will be filled after conversion">
+      <label for="fahrenheit">
+        Celsius (&deg;F):
+        <input type="number" id="fahrenheit" readonly placeholder="This will be filled after conversion">
       </label>
     </div>
     <div class="">
-      <label for="Formula">
+      <label for="formula">
         Calculation method:
-        <input type="text" id="Formula" readonly placeholder="This will be filled after conversion">
+        <input type="text" id="formula" readonly placeholder="This will be filled after conversion">
       </label>
     </div>
+    <span class="error-message"></span>
 
     <!-- Convertion Formula Section -->
     <section>
-      <h2>How to convert from Celcius (&deg;C) to Fahrenheit (&deg;F)</h2>
-      <p>Temperature <em>S </em>in Fahrenheit (&deg;F) is the same with temperature <em>S </em>in Celcius (&deg;C) times
+      <h2>How to convert from Celsius (&deg;C) to Fahrenheit (&deg;F)</h2>
+      <p>Temperature <em>S </em>in Fahrenheit (&deg;F) is the same with temperature <em>S </em>in Celsius (&deg;C) times
         <sup>9</sup>&frasl;<sub>5</sub> plus 32.
       </p>
 
@@ -59,6 +60,9 @@
   <footer>
     <p>&copy; Virz 2025</p>
   </footer>
+
+  <!-- Javascript import -->
+  <script src="js/script.js"></script>
 </body>
 
 </html>
