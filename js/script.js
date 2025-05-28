@@ -41,7 +41,7 @@ reverseButton.addEventListener("click", () => {
   } else {
     const c = (fahrenheitValue - 32) * 5 / 9;
     celsius.value = c.toFixed(2);
-    formula.value = `${fahrenheitValue}°F - 32) × (5/9) = ${celsius.value}°C`;
+    formula.value = `(${fahrenheitValue}°F - 32) × (5/9) = ${celsius.value}°C`;
     removeErrorMessages();
   }
 });
