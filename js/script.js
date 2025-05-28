@@ -1,3 +1,4 @@
+// DOM Collection
 const celsius = document.getElementById("celsius");
 const fahrenheit = document.getElementById("fahrenheit");
 const formula = document.getElementById("formula");
@@ -10,7 +11,9 @@ const reverseButton = document.getElementById("reverseButton");
 
 // Convert Celsius to Fahrenheit
 // and display the formula
-convertButton.addEventListener("click", () => {
+convertButton.addEventListener("click", convertCalculation);
+
+const convertCalculation = () => {
   const celsiusValue = parseFloat(celsius.value);
   if (isNaN(celsiusValue) || celsiusValue == null) {
     fahrenheit.value = "";
@@ -22,7 +25,7 @@ convertButton.addEventListener("click", () => {
     formula.value = `${celsiusValue}°C × (9/5) + 32 = ${fahrenheit.value}°F`;
     removeErrorMessages();
   }
-});
+}
 
 // Reset the input fields and formula
 resetButton.addEventListener("click", () => {
@@ -33,7 +36,9 @@ resetButton.addEventListener("click", () => {
 });
 
 // Reverse to convert from Fahrenheit to Celsius
-reverseButton.addEventListener("click", () => {
+reverseButton.addEventListener("click", reverseCalculation);
+
+const reverseCalculation = () => {
   const fahrenheitValue = parseFloat(fahrenheit.value);
   if (isNaN(fahrenheitValue)) {
     formula.value = "";
@@ -44,7 +49,7 @@ reverseButton.addEventListener("click", () => {
     formula.value = `(${fahrenheitValue}°F - 32) × (5/9) = ${celsius.value}°C`;
     removeErrorMessages();
   }
-});
+}
 
 // Helper functions to manage error messages
 const removeErrorMessages = () => {
