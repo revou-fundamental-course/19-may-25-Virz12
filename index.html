@@ -33,23 +33,25 @@
       </div>
       <div class="grid-1 box">
         <label for="fahrenheit">
-          Celsius (&deg;F)
+          Fahrenheit (&deg;F)
           <input type="number" id="fahrenheit" class="mt-2 dark-box" readonly
             placeholder="This will be filled after conversion">
         </label>
       </div>
-      <div class="grid-full box flex-between">
+      <!-- CTA Button Section -->
+      <section class="grid-full box flex-between">
         <button id="convertButton" class="button-primary">Convert</button>
         <button id="resetButton" class="button-primary">Reset</button>
         <button id="reverseButton" class="button-primary">Reverse</button>
       </div>
-      <div class="grid-full box">
+      <!-- Calculation Result Section -->
+      <section class="grid-full box">
         <label for="formula">
           Calculation method
           <input type="text" id="formula" class="mt-2 dark-box" readonly
             placeholder="This will be filled after conversion">
         </label>
-      </div>
+      </section>
       <span class="error-message text-center font-bold grid-full" style="display: none;"></span>
 
       <!-- Convertion Formula Section -->
